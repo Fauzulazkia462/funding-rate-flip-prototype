@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 
 export default function ModalNotification({
     open,
-    title,
     alerts = [],
     onClose,
     buttonLabel = "Close"
@@ -19,12 +18,13 @@ export default function ModalNotification({
 
     return (
         <dialog ref={dialogRef} className="modal-dialog">
-            {title && <h2>{title}</h2>}
+            <h2>Signal Alert!!</h2>
 
             {alerts.length > 0 ? (
                 alerts.map((alert, idx) => (
                     <p key={idx}>
-                        Symbol: <strong>{alert.symbol}</strong>
+                        It is a <strong>{alert.sign}</strong> sign for{" "}
+                        <strong>{alert.symbol}</strong>
                     </p>
                 ))
             ) : (

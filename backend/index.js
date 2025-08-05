@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const { readExcelAndCheck } = require("./checkLogic");
+const { readExcelAndCheck } = require("./service");
 
 const app = express();
 app.use(cors());
